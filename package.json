@@ -1,8 +1,10 @@
 {
     "name": "reCamera-Web",
-    "description": "A Node-RED Project",
+    "description": "A Node-RED Example for reCamera",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-sscma": "0.1.0"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
