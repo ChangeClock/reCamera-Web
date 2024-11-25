@@ -196,7 +196,7 @@
         "page": "034b986fab50b7bb",
         "width": "6",
         "height": "1",
-        "order": 4,
+        "order": 5,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -449,6 +449,20 @@
         "width": "6",
         "height": "1",
         "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "8ee7b1867c318ca3",
+        "type": "ui-group",
+        "name": "Storage",
+        "page": "034b986fab50b7bb",
+        "width": "6",
+        "height": "1",
+        "order": 4,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1183,8 +1197,8 @@
         "type": "Memory",
         "z": "772e6979.67cd08",
         "name": "",
-        "x": 111,
-        "y": 531,
+        "x": 300,
+        "y": 540,
         "wires": [
             [
                 "e6b8a679.aff648",
@@ -1199,9 +1213,19 @@
         "type": "inject",
         "z": "772e6979.67cd08",
         "name": "update",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "30",
         "crontab": "",
         "once": true,
+        "onceDelay": "",
         "topic": "",
         "payload": "",
         "payloadType": "date",
@@ -1212,7 +1236,9 @@
                 "f25a9b1d.c6fce8",
                 "c63cb373.ce94f",
                 "21faa622.8c25da",
-                "7cf01d46.a3cad4"
+                "7cf01d46.a3cad4",
+                "470242d7e0ff5a83",
+                "c52fa30928fc1673"
             ]
         ]
     },
@@ -1228,8 +1254,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 120,
-        "y": 700,
+        "x": 480,
+        "y": 580,
         "wires": [
             [
                 "cad9b978910c6f64"
@@ -1244,8 +1270,8 @@
         "func": "function formatBytes(bytes,decimals) {\n   if(bytes === 0) return '0 Byte';\n   var k = 1000; // or 1024 for binary\n   var dm = decimals + 1 || 3;\n   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];\n   var i = Math.floor(Math.log(bytes) / Math.log(k));\n   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];\n}\n\nmsg.payload = formatBytes(msg.payload.totalmem);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 120,
-        "y": 740,
+        "x": 480,
+        "y": 620,
         "wires": [
             [
                 "e44044438f64d561"
@@ -1260,8 +1286,8 @@
         "func": "function formatBytes(bytes,decimals) {\n   if(bytes === 0) return '0 Byte';\n   var k = 1000; // or 1024 for binary\n   var dm = decimals + 1 || 3;\n   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];\n   var i = Math.floor(Math.log(bytes) / Math.log(k));\n   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];\n}\n\nmsg.payload = formatBytes(msg.payload.freemem);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 120,
-        "y": 780,
+        "x": 480,
+        "y": 660,
         "wires": [
             [
                 "1c3c61e4b9c1493d"
@@ -1355,9 +1381,13 @@
         "name": "",
         "func": "msg.payload = msg.payload.memusage;\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
-        "x": 120,
-        "y": 660,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 540,
         "wires": [
             [
                 "afa9c487d23a4946"
@@ -1370,8 +1400,8 @@
         "z": "772e6979.67cd08",
         "name": "Memory Usage",
         "info": "",
-        "x": 296,
-        "y": 613,
+        "x": 680,
+        "y": 500,
         "wires": []
     },
     {
@@ -1440,8 +1470,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 330,
-        "y": 660,
+        "x": 690,
+        "y": 540,
         "wires": [
             []
         ]
@@ -1453,6 +1483,45 @@
         "group": "853d93c4c0f19c38",
         "name": "",
         "label": "Reboot",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 80,
+        "y": 1200,
+        "wires": [
+            [
+                "062153cab0708d4b"
+            ]
+        ]
+    },
+    {
+        "id": "eff1a2b29d264e9d",
+        "type": "ui-button",
+        "z": "772e6979.67cd08",
+        "group": "853d93c4c0f19c38",
+        "name": "",
+        "label": "Shutdown",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -1477,47 +1546,12 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 260,
-        "y": 980,
+        "x": 80,
+        "y": 1140,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "eff1a2b29d264e9d",
-        "type": "ui-button",
-        "z": "772e6979.67cd08",
-        "group": "853d93c4c0f19c38",
-        "name": "",
-        "label": "Shutdown",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 260,
-        "y": 940,
-        "wires": [
-            []
+            [
+                "763adecf7bc5be80"
+            ]
         ]
     },
     {
@@ -1558,8 +1592,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 320,
-        "y": 700,
+        "x": 680,
+        "y": 580,
         "wires": []
     },
     {
@@ -1580,8 +1614,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 320,
-        "y": 740,
+        "x": 680,
+        "y": 620,
         "wires": []
     },
     {
@@ -1602,8 +1636,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 310,
-        "y": 780,
+        "x": 670,
+        "y": 660,
         "wires": []
     },
     {
@@ -1714,6 +1748,451 @@
         "className": "",
         "x": 635,
         "y": 247,
+        "wires": []
+    },
+    {
+        "id": "ef986a57b3ca3f3f",
+        "type": "exec",
+        "z": "772e6979.67cd08",
+        "command": "sh -c \"echo 3 > /proc/sys/vm/drop_caches\"",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "Clear Cached Memory",
+        "x": 340,
+        "y": 1080,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "763adecf7bc5be80",
+        "type": "exec",
+        "z": "772e6979.67cd08",
+        "command": "reboot",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "Reboot",
+        "x": 300,
+        "y": 1140,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "062153cab0708d4b",
+        "type": "exec",
+        "z": "772e6979.67cd08",
+        "command": "shutdown -h now",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "Shutdown",
+        "x": 300,
+        "y": 1200,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f077c92954ab4b80",
+        "type": "ui-button",
+        "z": "772e6979.67cd08",
+        "group": "853d93c4c0f19c38",
+        "name": "Clear Cached Memory",
+        "label": "Clear Cached Memory",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 120,
+        "y": 1080,
+        "wires": [
+            [
+                "ef986a57b3ca3f3f"
+            ]
+        ]
+    },
+    {
+        "id": "470242d7e0ff5a83",
+        "type": "exec",
+        "z": "772e6979.67cd08",
+        "command": "top -d 0.5 -b -n2 | grep \"Cpu(s)\"|tail -n 1 | awk '{print ($2 + $4) / 100}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "CPU Load",
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [
+                "123556a6e9bf2ba9",
+                "b4993966523af7cd"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b8fe901430229832",
+        "type": "comment",
+        "z": "772e6979.67cd08",
+        "name": "CPU Load",
+        "info": "",
+        "x": 520,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "123556a6e9bf2ba9",
+        "type": "ui-gauge",
+        "z": "772e6979.67cd08",
+        "name": "CPU",
+        "group": "35ddf11ddd1ade60",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "CPU",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800"
+            },
+            {
+                "from": "70",
+                "color": "#ea5353"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 510,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b4993966523af7cd",
+        "type": "ui-chart",
+        "z": "772e6979.67cd08",
+        "group": "35ddf11ddd1ade60",
+        "name": "CPU Load%",
+        "label": "CPU Load%",
+        "order": 2,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "HH:mm:ss",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "%",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "5",
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 530,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c52fa30928fc1673",
+        "type": "exec",
+        "z": "772e6979.67cd08",
+        "command": "df -h",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "Disk Usage",
+        "x": 290,
+        "y": 780,
+        "wires": [
+            [
+                "3a63caead1e27f63"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3a63caead1e27f63",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "function 2",
+        "func": "// Input payload as a string\nlet data = msg.payload;\n\n// Split the input into lines\nlet lines = data.split('\\n');\n\n// Initialize variables\nlet totalSize = 0;       // Total space size in GB\nlet totalUsed = 0;       // Used space in GB\nlet totalAvailable = 0;   // Available space in GB\n\n// Regular expression to extract size, used, and available space from each line\nlet regex = /\\/dev\\/\\S+\\s+([\\d.]+)G\\s+([\\d.]+)G\\s+([\\d.]+)G\\s+\\d+%/;\n\n// Iterate through each line and sum the values\nfor (let line of lines) {\n    let match = line.match(regex);\n    if (match) {\n        // Extract the values in GB\n        totalSize += parseFloat(match[1]);       // Total Size\n        totalUsed += parseFloat(match[2]);        // Used\n        totalAvailable += parseFloat(match[3]);   // Available\n    }\n}\n\n// Format the results to two decimal places\ntotalSize = totalSize.toFixed(2);         \ntotalUsed = totalUsed.toFixed(2);       \ntotalAvailable = totalAvailable.toFixed(2);   \n\n// Calculate used and free percentages\nlet usedPercentage = ((totalUsed / totalSize) * 100).toFixed(2);\nlet freePercentage = ((totalAvailable / totalSize) * 100).toFixed(2);\n\n// Create different messages for each output\nlet output1 = { payload: totalSize };           // Total size in GB\nlet output2 = { payload: totalUsed };            // Used space in GB\nlet output3 = { payload: totalAvailable };       // Available space in GB\nlet output4 = { payload: usedPercentage };       // Used percentage\nlet output5 = { payload: freePercentage };       // Free percentage\n\n// Return all five outputs as an array\nreturn [output1, output2, output3, output4, output5];\n",
+        "outputs": 5,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 800,
+        "wires": [
+            [
+                "b4d1a5f6ebf4d5fc"
+            ],
+            [
+                "8048bf79ab7a2c1c"
+            ],
+            [
+                "f17dda10cc817e05"
+            ],
+            [
+                "3ba364d6b2c87e48"
+            ],
+            [
+                "46211c6549d8c086"
+            ]
+        ]
+    },
+    {
+        "id": "6274f64d6b5a6059",
+        "type": "comment",
+        "z": "772e6979.67cd08",
+        "name": "Disk Usage",
+        "info": "",
+        "x": 670,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "b4d1a5f6ebf4d5fc",
+        "type": "ui-text",
+        "z": "772e6979.67cd08",
+        "group": "8ee7b1867c318ca3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Total Storage",
+        "label": "Total Storage (GB)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 670,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "8048bf79ab7a2c1c",
+        "type": "ui-text",
+        "z": "772e6979.67cd08",
+        "group": "8ee7b1867c318ca3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Used Storage",
+        "label": "Used Storage (GB)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 680,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "f17dda10cc817e05",
+        "type": "ui-text",
+        "z": "772e6979.67cd08",
+        "group": "8ee7b1867c318ca3",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Free Storage",
+        "label": "Free Storage (GB)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 670,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "3ba364d6b2c87e48",
+        "type": "ui-gauge",
+        "z": "772e6979.67cd08",
+        "name": "Used Storage",
+        "group": "8ee7b1867c318ca3",
+        "order": 4,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-battery",
+        "gstyle": "needle",
+        "title": "Used Storage",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800"
+            },
+            {
+                "from": "70",
+                "color": "#5cd65c"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 680,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "46211c6549d8c086",
+        "type": "ui-gauge",
+        "z": "772e6979.67cd08",
+        "name": "Free Storage",
+        "group": "8ee7b1867c318ca3",
+        "order": 5,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-battery",
+        "gstyle": "needle",
+        "title": "Free Storage",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800"
+            },
+            {
+                "from": "70",
+                "color": "#5cd65c"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 670,
+        "y": 940,
         "wires": []
     }
 ]
