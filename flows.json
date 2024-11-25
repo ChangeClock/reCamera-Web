@@ -1,8 +1,16 @@
 [
     {
-        "id": "838718bbb3fd4106",
+        "id": "36487a7f023a67a8",
         "type": "tab",
-        "label": "Model",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ff07473d268e8fb4",
+        "type": "tab",
+        "label": "Flow 2",
         "disabled": false,
         "info": "",
         "env": []
@@ -17,53 +25,904 @@
         "password": ""
     },
     {
-        "id": "da31dcb62f627d0e",
+        "id": "53a493606ee6d430",
+        "type": "ui-group",
+        "name": "Preview",
+        "page": "eb4ea4ad231b87b6",
+        "width": "6",
+        "height": "12",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d9c66abde84c734d",
+        "type": "ui-group",
+        "name": "Model Selection",
+        "page": "eb4ea4ad231b87b6",
+        "width": "4",
+        "height": "10",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "eb4ea4ad231b87b6",
+        "type": "ui-page",
+        "name": "Preview",
+        "ui": "6b7688bddd92fc1f",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "234998f63c55af55",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "6b7688bddd92fc1f",
+        "type": "ui-base",
+        "name": "reCamera Prototype",
+        "path": "/dashboard",
+        "appIcon": "//images.weserv.nl/?url=https://www.hbzjkhhz.fun/wp-content/uploads/2024/11/1732178239-reCameraAppIcon.png",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "showPageTitle": true,
+        "navigationStyle": "default",
+        "titleBarStyle": "default"
+    },
+    {
+        "id": "234998f63c55af55",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "2788be32a24982e1",
+        "type": "ui-page",
+        "name": "Device Setting",
+        "ui": "6b7688bddd92fc1f",
+        "path": "/device_setting",
+        "icon": "cog",
+        "layout": "grid",
+        "theme": "234998f63c55af55",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "0403368ef716b66e",
+        "type": "ui-spacer",
+        "group": "d9c66abde84c734d",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 5,
+        "width": "2",
+        "height": "6",
+        "className": ""
+    },
+    {
+        "id": "15bec593c23e2df1",
+        "type": "ui-group",
+        "name": "Wi-Fi",
+        "page": "2788be32a24982e1",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "853d93c4c0f19c38",
+        "type": "ui-group",
+        "name": "Power",
+        "page": "2788be32a24982e1",
+        "width": "6",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "a2f6b486b575c329",
+        "type": "ui-group",
+        "name": "Info",
+        "page": "2788be32a24982e1",
+        "width": "6",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c74851666f9e9c6e",
         "type": "camera",
-        "z": "838718bbb3fd4106",
-        "option": 0,
+        "z": "36487a7f023a67a8",
         "light": false,
         "client": "453c8631c4e4b0d5",
-        "x": 150,
-        "y": 200,
+        "x": 331,
+        "y": 362,
         "wires": [
             [
-                "e2b31b5d813171de"
+                "2696f0e9801987e4",
+                "06ec1439c52797c2"
             ]
         ]
     },
     {
-        "id": "e2b31b5d813171de",
+        "id": "593b63a07f7f6068",
+        "type": "function",
+        "z": "36487a7f023a67a8",
+        "name": "Get base 64 img output",
+        "func": "// 获取输入消息的 payload\nvar imageData = msg.payload.data.image;\n// var imageBoxes = msg.payload.data.boxes;\n\n// 输出图像信息\nmsg.payload = {\n    image: imageData,\n    // boxes: imageBoxes\n    \n};\n\n// node.warn(msg.payload);\n\n// 返回新的消息\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 160,
+        "wires": [
+            [
+                "e5a61b46eb1b6f86"
+            ]
+        ]
+    },
+    {
+        "id": "e5a61b46eb1b6f86",
+        "type": "ui-template",
+        "z": "36487a7f023a67a8",
+        "group": "53a493606ee6d430",
+        "page": "",
+        "ui": "",
+        "name": "Display image",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "head": "",
+        "format": "<template>\n    <div class=\"overlay-container\">\n        <!-- Original Image -->\n        <img :src=\"'data:image/jpeg;base64,' + msg.payload.image\" \n             class=\"image\" \n             style=\"max-width: 100%; height: 640 px; object-fit: contain; position: absolute;\"/>\n    </div>\n</template>\n<style>\n    .overlay-container {\n        position: relative;\n        width: 100%;\n        height: 100%;\n    }\n    .image {\n        z-index: 1;\n        position: absolute;\n        top: 0;\n        left: 0;\n    }\n</style>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 980,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "acf09ef357b6a207",
+        "type": "ui-template",
+        "z": "36487a7f023a67a8",
+        "group": "53a493606ee6d430",
+        "page": "",
+        "ui": "",
+        "name": "draw out frame",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "head": "",
+        "format": "<template>\n    <canvas id=\"objectCanvas\" width=\"320 px\" height=\"320 px\">\n    </canvas>\n</template>\n\n<script>\nexport default {\n    mounted() {\n        this.$nextTick(() => {\n            const canvas = document.getElementById('objectCanvas');\n            if (!canvas) {\n                console.error(\"Canvas element not found\");\n                return;\n            }\n            const ctx = canvas.getContext('2d');\n\n            // Define class colors\n            const classColors = {\n                person: \"#ff0000\", bicycle: \"#00ff00\", car: \"#0000ff\", motorcycle: \"#ffff00\", airplane: \"#ff00ff\",\n                bus: \"#00ffff\", train: \"#800000\", truck: \"#808000\", boat: \"#800080\", \"traffic light\": \"#008080\",\n                \"fire hydrant\": \"#c0c0c0\", \"stop sign\": \"#ffa500\", \"parking meter\": \"#a52a2a\", bench: \"#008000\",\n                bird: \"#000080\", cat: \"#ff6347\", dog: \"#4682b4\", horse: \"#daa520\", sheep: \"#5f9ea0\", cow: \"#9acd32\",\n                elephant: \"#6a5acd\", bear: \"#7fffd4\", zebra: \"#8b4513\", giraffe: \"#b8860b\", backpack: \"#556b2f\",\n                umbrella: \"#2e8b57\", handbag: \"#66cdaa\", tie: \"#4682b4\", suitcase: \"#8a2be2\", frisbee: \"#d2691e\",\n                skis: \"#dc143c\", snowboard: \"#00008b\", \"sports ball\": \"#006400\", kite: \"#8b008b\", \"baseball bat\": \"#9932cc\",\n                \"baseball glove\": \"#9400d3\", skateboard: \"#ff1493\", surfboard: \"#00ced1\", \"tennis racket\": \"#1e90ff\",\n                bottle: \"#ff4500\", \"wine glass\": \"#2f4f4f\", cup: \"#8b0000\", fork: \"#cd5c5c\", knife: \"#4b0082\",\n                spoon: \"#800080\", bowl: \"#e9967a\", banana: \"#f4a460\", apple: \"#ff6347\", sandwich: \"#8a2be2\",\n                orange: \"#ff4500\", broccoli: \"#32cd32\", carrot: \"#228b22\", \"hot dog\": \"#b22222\", pizza: \"#ff8c00\",\n                donut: \"#f08080\", cake: \"#ff69b4\", chair: \"#6b8e23\", couch: \"#3cb371\", \"potted plant\": \"#8fbc8f\",\n                bed: \"#00fa9a\", \"dining table\": \"#adff2f\", toilet: \"#7fff00\", tv: \"#7cfc00\", laptop: \"#00ff7f\",\n                mouse: \"#00bfff\", remote: \"#1e90ff\", keyboard: \"#4682b4\", \"cell phone\": \"#5f9ea0\", microwave: \"#6495ed\",\n                oven: \"#dc143c\", toaster: \"#ff7f50\", sink: \"#ff6347\", refrigerator: \"#ff4500\", book: \"#8b4513\",\n                clock: \"#a52a2a\", vase: \"#ff6347\", scissors: \"#9932cc\", \"teddy bear\": \"#8a2be2\", \"hair drier\": \"#9400d3\",\n                toothbrush: \"#ff1493\"\n            };\n\n            const classNames = Object.keys(classColors);\n\n            this.$watch('msg.payload', (data) => {\n                if (data && data.boxes) {\n                    ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n                    const scaleX = canvas.width / data.originalWidth;\n                    const scaleY = canvas.height / data.originalHeight;\n\n                    data.boxes.forEach((box) => {\n                        const [cx, cy, width, height, confidence, classId] = box;\n                        const className = classNames[classId] || \"unknown\";\n                        const color = classColors[className] || \"#ffffff\"; // Default to white if class not found\n\n                        // Calculate top-left corner and scale\n                        const x = (cx - width / 2) * scaleX;\n                        const y = (cy - height / 2) * scaleY;\n                        const w = width * scaleX;\n                        const h = height * scaleY;\n\n                        // Draw bounding box\n                        ctx.strokeStyle = color;\n                        ctx.lineWidth = 2;\n                        ctx.strokeRect(x, y, w, h);\n\n                        // Draw label\n                        ctx.fillStyle = color;\n                        ctx.font = '14px Arial';\n                        const label = `${className} (${confidence.toFixed(2)})`;\n                        ctx.fillText(label, x + 5, y - 5);\n                    });\n                }\n            });\n        });\n    }\n};\n</script>\n\n<style>\ncanvas {\n    z-index: 2;\n    position: absolute;\n    top: 0;\n    left: 0;\n    pointer-events: none;\n    width: 320;\n    height: 320;\n}\n</style>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2d741215066436a",
+        "type": "function",
+        "z": "36487a7f023a67a8",
+        "name": "Get detection box info",
+        "func": "// 获取输入消息的 payload\nvar imageBoxes = msg.payload.data.boxes;\n// var boxNum = msg.payload.data.boxes.length();\n\n\n// 输出图像信息\nmsg.payload = {\n    boxes: imageBoxes,\n    originalWidth:640,\n    originalHeight:480\n};\n\n// node.warn(msg.payload);\n\n// 返回新的消息\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 420,
+        "wires": [
+            [
+                "acf09ef357b6a207"
+            ]
+        ]
+    },
+    {
+        "id": "263684946e55f174",
+        "type": "ui-text",
+        "z": "36487a7f023a67a8",
+        "group": "d9c66abde84c734d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Model is: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 450,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "5ded44dc7402ea98",
+        "type": "ui-dropdown",
+        "z": "36487a7f023a67a8",
+        "group": "d9c66abde84c734d",
+        "name": "",
+        "label": "Select Option:",
+        "tooltip": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "Yolo V8",
+                "value": "0",
+                "type": "str"
+            },
+            {
+                "label": "Yolo V11",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "More",
+                "value": "2",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "x": 700,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "378623334dee45b4",
+        "type": "ui-button",
+        "z": "36487a7f023a67a8",
+        "group": "d9c66abde84c734d",
+        "name": "",
+        "label": "Apply",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 670,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d7d78677d61b37a",
+        "type": "ui-text",
+        "z": "36487a7f023a67a8",
+        "group": "d9c66abde84c734d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Available Model List",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 460,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "2696f0e9801987e4",
+        "type": "stream",
+        "z": "36487a7f023a67a8",
+        "d": true,
+        "name": "stream",
+        "protocol": 0,
+        "port": 554,
+        "session": "live",
+        "username": "admin",
+        "password": "admin",
+        "client": "453c8631c4e4b0d5",
+        "x": 451,
+        "y": 462,
+        "wires": []
+    },
+    {
+        "id": "ac071441a081202a",
+        "type": "ui-template",
+        "z": "36487a7f023a67a8",
+        "d": true,
+        "group": "53a493606ee6d430",
+        "page": "",
+        "ui": "",
+        "name": "rtsp test",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div>\n    <iframe src=\"vlc://rtsp://admin:admin@192.168.42.1:554/stream\" width=\"640\" ></iframe>\n\n  </div>\n</template>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 440,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06ec1439c52797c2",
         "type": "model",
-        "z": "838718bbb3fd4106",
+        "z": "36487a7f023a67a8",
         "name": "",
         "uri": "",
         "model": "yolo11n_cv181x_int8.cvimodel",
         "tscore": 0.45,
         "tiou": 0.25,
-        "debug": false,
+        "debug": true,
         "trace": false,
         "counting": false,
         "classes": "person,bicycle,car,motorcycle,airplane,bus,train,truck,boat,traffic light,fire hydrant,stop sign,parking meter,bench,bird,cat,dog,horse,sheep,cow,elephant,bear,zebra,giraffe,backpack,umbrella,handbag,tie,suitcase,frisbee,skis,snowboard,sports ball,kite,baseball bat,baseball glove,skateboard,surfboard,tennis racket,bottle,wine glass,cup,fork,knife,spoon,bowl,banana,apple,sandwich,orange,broccoli,carrot,hot dog,pizza,donut,cake,chair,couch,potted plant,bed,dining table,toilet,tv,laptop,mouse,remote,keyboard,cell phone,microwave,oven,toaster,sink,refrigerator,book,clock,vase,scissors,teddy bear,hair drier,toothbrush",
         "splitter": "0,0,0,0",
         "client": "453c8631c4e4b0d5",
-        "x": 330,
-        "y": 200,
+        "x": 490,
+        "y": 300,
         "wires": [
             [
-                "70303cd1c2a32fee"
+                "593b63a07f7f6068",
+                "d2d741215066436a"
             ]
         ]
     },
     {
-        "id": "70303cd1c2a32fee",
-        "type": "preview",
-        "z": "838718bbb3fd4106",
+        "id": "713e323f54f5dfd2",
+        "type": "ui-slider",
+        "z": "36487a7f023a67a8",
+        "group": "d9c66abde84c734d",
+        "name": "Confidence",
+        "label": "Confidence",
+        "tooltip": "",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "thumbLabel": "true",
+        "showTicks": "always",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "x": 690,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba49c12080809bf7",
+        "type": "ui-slider",
+        "z": "36487a7f023a67a8",
+        "group": "d9c66abde84c734d",
+        "name": "IoU",
+        "label": "IoU",
+        "tooltip": "",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "thumbLabel": "true",
+        "showTicks": "always",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "x": 670,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e4aef6c20f1d7ca",
+        "type": "exec",
+        "z": "ff07473d268e8fb4",
+        "command": "iwlist wlan0 scan | grep 'ESSID'",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Scan Wi-Fi Networks",
+        "x": 580,
+        "y": 400,
+        "wires": [
+            [
+                "519cfe989c4c1099"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e4f1f07dc4ea3880",
+        "type": "ui-control",
+        "z": "ff07473d268e8fb4",
         "name": "",
+        "ui": "6b7688bddd92fc1f",
+        "events": "change",
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "4b5423fb57d932af"
+            ]
+        ]
+    },
+    {
+        "id": "4b5423fb57d932af",
+        "type": "function",
+        "z": "ff07473d268e8fb4",
+        "name": "function 1",
+        "func": "if (msg.name == \"Device Setting\") {\n    // node.warn(\"tessst\");\n    return msg;\n} else {\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 280,
+        "wires": [
+            [
+                "6c60e81bbf42df29",
+                "7e4aef6c20f1d7ca"
+            ]
+        ]
+    },
+    {
+        "id": "6c60e81bbf42df29",
+        "type": "exec",
+        "z": "ff07473d268e8fb4",
+        "command": "iwgetid -r",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Get Current SSID",
+        "x": 570,
+        "y": 280,
+        "wires": [
+            [
+                "7548aaa8eb87f279"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7548aaa8eb87f279",
+        "type": "function",
+        "z": "ff07473d268e8fb4",
+        "name": "format current ssid",
+        "func": "msg.payload = { currentSSID: msg.payload.trim() };\n\n// node.warn('test' + msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 280,
+        "wires": [
+            [
+                "e994c966b40439a0"
+            ]
+        ]
+    },
+    {
+        "id": "e994c966b40439a0",
+        "type": "ui-template",
+        "z": "ff07473d268e8fb4",
+        "group": "15bec593c23e2df1",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div>\n        <h3>Current Wi-Fi:{{msg.payload.currentSSID}}</h3>\n    </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1080,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "519cfe989c4c1099",
+        "type": "function",
+        "z": "ff07473d268e8fb4",
+        "name": "Format Available Networks",
+        "func": "// Split the output by new lines\nlet networks = msg.payload.split('\\n');\n\n// Filter out empty lines and extract SSID names\nnetworks = networks\n    .filter(line => line.includes('ESSID:'))\n    .map(line => line.replace('ESSID:', '').replace(/\"/g, '').trim());\n\n// Set the formatted networks as msg.payload\nmsg.options = networks;\n\n// node.warn(networks);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 400,
+        "wires": [
+            [
+                "8aadd78806d45e45"
+            ]
+        ]
+    },
+    {
+        "id": "8aadd78806d45e45",
+        "type": "ui-dropdown",
+        "z": "ff07473d268e8fb4",
+        "group": "15bec593c23e2df1",
+        "name": "",
+        "label": "Available Wi-Fi",
+        "tooltip": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "x": 1120,
+        "y": 400,
+        "wires": [
+            [
+                "a460e86479e1d821"
+            ]
+        ]
+    },
+    {
+        "id": "a460e86479e1d821",
+        "type": "debug",
+        "z": "ff07473d268e8fb4",
+        "name": "debug 1",
         "active": true,
-        "pass": false,
-        "outputs": 0,
-        "x": 520,
-        "y": 200,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a7ef82ce5039f3f3",
+        "type": "ui-button",
+        "z": "ff07473d268e8fb4",
+        "group": "853d93c4c0f19c38",
+        "name": "",
+        "label": "Reboot",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 320,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eff1a2b29d264e9d",
+        "type": "ui-button",
+        "z": "ff07473d268e8fb4",
+        "group": "853d93c4c0f19c38",
+        "name": "",
+        "label": "Shutdown",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 530,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a0dca3d1139a537",
+        "type": "ui-text",
+        "z": "ff07473d268e8fb4",
+        "group": "a2f6b486b575c329",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "CPU",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 310,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "faebf43a1615e437",
+        "type": "ui-text",
+        "z": "ff07473d268e8fb4",
+        "group": "a2f6b486b575c329",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "RAM",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 310,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "e86c72e1e1f16a79",
+        "type": "ui-text",
+        "z": "ff07473d268e8fb4",
+        "group": "a2f6b486b575c329",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "NPU",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 310,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "cf7b8fa043366fad",
+        "type": "ui-text",
+        "z": "ff07473d268e8fb4",
+        "group": "a2f6b486b575c329",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "OS",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 310,
+        "y": 1100,
         "wires": []
     }
 ]
