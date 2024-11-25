@@ -2,7 +2,7 @@
     {
         "id": "36487a7f023a67a8",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Preview",
         "disabled": false,
         "info": "",
         "env": []
@@ -10,10 +10,15 @@
     {
         "id": "ff07473d268e8fb4",
         "type": "tab",
-        "label": "Flow 2",
+        "label": "Device",
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "772e6979.67cd08",
+        "type": "tab",
+        "label": "System"
     },
     {
         "id": "453c8631c4e4b0d5",
@@ -126,9 +131,9 @@
     {
         "id": "2788be32a24982e1",
         "type": "ui-page",
-        "name": "Device Setting",
+        "name": "Network",
         "ui": "6b7688bddd92fc1f",
-        "path": "/device_setting",
+        "path": "/network",
         "icon": "cog",
         "layout": "grid",
         "theme": "234998f63c55af55",
@@ -188,7 +193,245 @@
         "id": "853d93c4c0f19c38",
         "type": "ui-group",
         "name": "Power",
-        "page": "2788be32a24982e1",
+        "page": "034b986fab50b7bb",
+        "width": "6",
+        "height": "1",
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "a2f6b486b575c329",
+        "type": "ui-group",
+        "name": "Sys Info",
+        "page": "034b986fab50b7bb",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "ca54f23962a86f89",
+        "type": "ui_group",
+        "name": "OS",
+        "tab": "f806abdb1cb34130",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1ce95ef59ad72d6d",
+        "type": "ui_group",
+        "name": "CPU",
+        "tab": "f806abdb1cb34130",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ef534acf744776de",
+        "type": "ui_group",
+        "name": "Memory",
+        "tab": "f806abdb1cb34130",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c3e01724a5a1b3bf",
+        "type": "ui_group",
+        "name": "Storage",
+        "tab": "f806abdb1cb34130",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f19a1dc729b03eda",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "7853403.230cdc",
+        "type": "ui_group",
+        "name": "CPU Load",
+        "tab": "e6013c6f.69328",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "1d1da0fc.6ab84f",
+        "type": "ui_group",
+        "name": "Memory",
+        "tab": "e6013c6f.69328",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "a9912d64.97094",
+        "type": "ui_group",
+        "name": "System Information",
+        "tab": "e6013c6f.69328",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "e6013c6f.69328",
+        "type": "ui_tab",
+        "name": "System",
+        "icon": "computer"
+    },
+    {
+        "id": "034b986fab50b7bb",
+        "type": "ui-page",
+        "name": "Device",
+        "ui": "6b7688bddd92fc1f",
+        "path": "/Device",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "234998f63c55af55",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "cb81f9d78a6a3513",
+        "type": "ui-group",
+        "name": "Memory",
+        "page": "034b986fab50b7bb",
         "width": "6",
         "height": "1",
         "order": 3,
@@ -199,10 +442,10 @@
         "groupType": "default"
     },
     {
-        "id": "a2f6b486b575c329",
+        "id": "35ddf11ddd1ade60",
         "type": "ui-group",
-        "name": "Info",
-        "page": "2788be32a24982e1",
+        "name": "Load",
+        "page": "034b986fab50b7bb",
         "width": "6",
         "height": "1",
         "order": 2,
@@ -223,7 +466,8 @@
         "wires": [
             [
                 "2696f0e9801987e4",
-                "06ec1439c52797c2"
+                "06ec1439c52797c2",
+                "a2831dbef4c34207"
             ]
         ]
     },
@@ -569,6 +813,49 @@
         ]
     },
     {
+        "id": "a2831dbef4c34207",
+        "type": "save",
+        "z": "36487a7f023a67a8",
+        "name": "save",
+        "slice": "300",
+        "storage": "local",
+        "duration": "1",
+        "start": true,
+        "client": "453c8631c4e4b0d5",
+        "x": 470,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "1649ae1e846acd4a",
+        "type": "inject",
+        "z": "36487a7f023a67a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 640,
+        "wires": [
+            [
+                "a2831dbef4c34207"
+            ]
+        ]
+    },
+    {
         "id": "7e4aef6c20f1d7ca",
         "type": "exec",
         "z": "ff07473d268e8fb4",
@@ -764,9 +1051,405 @@
         "wires": []
     },
     {
+        "id": "7a0dca3d1139a537",
+        "type": "ui-text",
+        "z": "ff07473d268e8fb4",
+        "group": "a2f6b486b575c329",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "CPU",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 310,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "faebf43a1615e437",
+        "type": "ui-text",
+        "z": "ff07473d268e8fb4",
+        "group": "a2f6b486b575c329",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "RAM",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 310,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "e86c72e1e1f16a79",
+        "type": "ui-text",
+        "z": "ff07473d268e8fb4",
+        "group": "a2f6b486b575c329",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "NPU",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 310,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "cf7b8fa043366fad",
+        "type": "ui-text",
+        "z": "ff07473d268e8fb4",
+        "group": "a2f6b486b575c329",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "OS",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 310,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "f25a9b1d.c6fce8",
+        "type": "OS",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "x": 289,
+        "y": 125,
+        "wires": [
+            [
+                "f745cace.30f2d8",
+                "3153bd68.82b782",
+                "7eec4b7e.c15ad4",
+                "6b4d7f76.271fb"
+            ]
+        ]
+    },
+    {
+        "id": "c63cb373.ce94f",
+        "type": "Uptime",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "x": 300,
+        "y": 80,
+        "wires": [
+            [
+                "20567afa.bd4466"
+            ]
+        ]
+    },
+    {
+        "id": "21faa622.8c25da",
+        "type": "CPUs",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "x": 289,
+        "y": 170,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7cf01d46.a3cad4",
+        "type": "Memory",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "x": 111,
+        "y": 531,
+        "wires": [
+            [
+                "e6b8a679.aff648",
+                "dd0cca19.6f90a8",
+                "308d683f.10ab08",
+                "fbd3e7db.8ca558"
+            ]
+        ]
+    },
+    {
+        "id": "ed27cae4.70b728",
+        "type": "inject",
+        "z": "772e6979.67cd08",
+        "name": "update",
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 94,
+        "y": 245,
+        "wires": [
+            [
+                "f25a9b1d.c6fce8",
+                "c63cb373.ce94f",
+                "21faa622.8c25da",
+                "7cf01d46.a3cad4"
+            ]
+        ]
+    },
+    {
+        "id": "e6b8a679.aff648",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.memusage;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 700,
+        "wires": [
+            [
+                "cad9b978910c6f64"
+            ]
+        ]
+    },
+    {
+        "id": "dd0cca19.6f90a8",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "function formatBytes(bytes,decimals) {\n   if(bytes === 0) return '0 Byte';\n   var k = 1000; // or 1024 for binary\n   var dm = decimals + 1 || 3;\n   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];\n   var i = Math.floor(Math.log(bytes) / Math.log(k));\n   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];\n}\n\nmsg.payload = formatBytes(msg.payload.totalmem);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 120,
+        "y": 740,
+        "wires": [
+            [
+                "e44044438f64d561"
+            ]
+        ]
+    },
+    {
+        "id": "308d683f.10ab08",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "function formatBytes(bytes,decimals) {\n   if(bytes === 0) return '0 Byte';\n   var k = 1000; // or 1024 for binary\n   var dm = decimals + 1 || 3;\n   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];\n   var i = Math.floor(Math.log(bytes) / Math.log(k));\n   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];\n}\n\nmsg.payload = formatBytes(msg.payload.freemem);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 120,
+        "y": 780,
+        "wires": [
+            [
+                "1c3c61e4b9c1493d"
+            ]
+        ]
+    },
+    {
+        "id": "20567afa.bd4466",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "function timeConversion(millisec) {\n\n    var seconds = (millisec / 1000).toFixed(1);\n\n    var minutes = (millisec / (1000 * 60)).toFixed(1);\n\n    var hours = (millisec / (1000 * 60 * 60)).toFixed(1);\n\n    var days = (millisec / (1000 * 60 * 60 * 24)).toFixed(1);\n\n    if (seconds < 60) {\n        return seconds + \" Sec\";\n    } else if (minutes < 60) {\n        return minutes + \" Min\";\n    } else if (hours < 24) {\n        return hours + \" Hrs\";\n    } else {\n        return days + \" Days\"\n    }\n}\n\nmsg.payload = timeConversion(msg.payload.uptime * 1000);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 461,
+        "y": 80,
+        "wires": [
+            [
+                "56483138ec7e43b1"
+            ]
+        ]
+    },
+    {
+        "id": "f745cace.30f2d8",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.hostname;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 117,
+        "wires": [
+            [
+                "adf74ed12bc4bc6a"
+            ]
+        ]
+    },
+    {
+        "id": "3153bd68.82b782",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.platform;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 462,
+        "y": 155,
+        "wires": [
+            [
+                "6d51e653b415b19e"
+            ]
+        ]
+    },
+    {
+        "id": "7eec4b7e.c15ad4",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.arch;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 463,
+        "y": 194,
+        "wires": [
+            [
+                "77cd1a50b077b7e9"
+            ]
+        ]
+    },
+    {
+        "id": "6b4d7f76.271fb",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.release;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 464,
+        "y": 230,
+        "wires": [
+            [
+                "dfc592aff0377aa1"
+            ]
+        ]
+    },
+    {
+        "id": "fbd3e7db.8ca558",
+        "type": "function",
+        "z": "772e6979.67cd08",
+        "name": "",
+        "func": "msg.payload = msg.payload.memusage;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "afa9c487d23a4946"
+            ]
+        ]
+    },
+    {
+        "id": "c759448a.854258",
+        "type": "comment",
+        "z": "772e6979.67cd08",
+        "name": "Memory Usage",
+        "info": "",
+        "x": 296,
+        "y": 613,
+        "wires": []
+    },
+    {
+        "id": "ff2b3794.382148",
+        "type": "comment",
+        "z": "772e6979.67cd08",
+        "name": "System Information",
+        "info": "",
+        "x": 642,
+        "y": 29,
+        "wires": []
+    },
+    {
+        "id": "afa9c487d23a4946",
+        "type": "ui-chart",
+        "z": "772e6979.67cd08",
+        "group": "cb81f9d78a6a3513",
+        "name": "Memory - 24 Hours",
+        "label": "24 Hours",
+        "order": 2,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "HH:mm:ss",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "%",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 330,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "a7ef82ce5039f3f3",
         "type": "ui-button",
-        "z": "ff07473d268e8fb4",
+        "z": "772e6979.67cd08",
         "group": "853d93c4c0f19c38",
         "name": "",
         "label": "Reboot",
@@ -794,8 +1477,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 320,
-        "y": 840,
+        "x": 260,
+        "y": 980,
         "wires": [
             []
         ]
@@ -803,7 +1486,7 @@
     {
         "id": "eff1a2b29d264e9d",
         "type": "ui-button",
-        "z": "ff07473d268e8fb4",
+        "z": "772e6979.67cd08",
         "group": "853d93c4c0f19c38",
         "name": "",
         "label": "Shutdown",
@@ -831,22 +1514,108 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 530,
-        "y": 840,
+        "x": 260,
+        "y": 940,
         "wires": [
             []
         ]
     },
     {
-        "id": "7a0dca3d1139a537",
+        "id": "cad9b978910c6f64",
+        "type": "ui-gauge",
+        "z": "772e6979.67cd08",
+        "name": "Memory Usage",
+        "group": "cb81f9d78a6a3513",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "1 Minute",
+        "units": "Usage",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800"
+            },
+            {
+                "from": "70",
+                "color": "#ea5353"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 320,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "e44044438f64d561",
         "type": "ui-text",
-        "z": "ff07473d268e8fb4",
+        "z": "772e6979.67cd08",
+        "group": "cb81f9d78a6a3513",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Total Memory",
+        "label": "Total Memory",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 320,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "1c3c61e4b9c1493d",
+        "type": "ui-text",
+        "z": "772e6979.67cd08",
+        "group": "cb81f9d78a6a3513",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Free Memory",
+        "label": "Free Memory",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 310,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "56483138ec7e43b1",
+        "type": "ui-text",
+        "z": "772e6979.67cd08",
         "group": "a2f6b486b575c329",
         "order": 1,
         "width": 0,
         "height": 0,
-        "name": "",
-        "label": "CPU",
+        "name": "Uptime",
+        "label": "Uptime",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -855,42 +1624,20 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 310,
-        "y": 980,
+        "x": 635,
+        "y": 87,
         "wires": []
     },
     {
-        "id": "faebf43a1615e437",
+        "id": "adf74ed12bc4bc6a",
         "type": "ui-text",
-        "z": "ff07473d268e8fb4",
-        "group": "a2f6b486b575c329",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "RAM",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "x": 310,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "e86c72e1e1f16a79",
-        "type": "ui-text",
-        "z": "ff07473d268e8fb4",
+        "z": "772e6979.67cd08",
         "group": "a2f6b486b575c329",
         "order": 2,
         "width": 0,
         "height": 0,
-        "name": "",
-        "label": "NPU",
+        "name": "Hostname",
+        "label": "Hostname",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -899,20 +1646,42 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 310,
-        "y": 1060,
+        "x": 645,
+        "y": 127,
         "wires": []
     },
     {
-        "id": "cf7b8fa043366fad",
+        "id": "6d51e653b415b19e",
         "type": "ui-text",
-        "z": "ff07473d268e8fb4",
+        "z": "772e6979.67cd08",
+        "group": "a2f6b486b575c329",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Platform",
+        "label": "Platform",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 635,
+        "y": 167,
+        "wires": []
+    },
+    {
+        "id": "77cd1a50b077b7e9",
+        "type": "ui-text",
+        "z": "772e6979.67cd08",
         "group": "a2f6b486b575c329",
         "order": 4,
         "width": 0,
         "height": 0,
-        "name": "",
-        "label": "OS",
+        "name": "Arch",
+        "label": "Arch",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -921,8 +1690,30 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 310,
-        "y": 1100,
+        "x": 625,
+        "y": 207,
+        "wires": []
+    },
+    {
+        "id": "dfc592aff0377aa1",
+        "type": "ui-text",
+        "z": "772e6979.67cd08",
+        "group": "a2f6b486b575c329",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Release",
+        "label": "Release",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 635,
+        "y": 247,
         "wires": []
     }
 ]
