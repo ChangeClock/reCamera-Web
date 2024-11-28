@@ -2032,7 +2032,7 @@
         "order": 4,
         "width": 3,
         "height": 3,
-        "gtype": "gauge-battery",
+        "gtype": "gauge-tank",
         "gstyle": "needle",
         "title": "Used Storage",
         "units": "units",
@@ -2042,15 +2042,19 @@
         "segments": [
             {
                 "from": "0",
-                "color": "#ea5353"
+                "color": "#a8f5ff"
             },
             {
-                "from": "40",
-                "color": "#ffc800"
+                "from": "15",
+                "color": "#55dbec"
             },
             {
-                "from": "70",
-                "color": "#5cd65c"
+                "from": "35",
+                "color": "#53b4fd"
+            },
+            {
+                "from": "50",
+                "color": "#2397d1"
             }
         ],
         "min": 0,
@@ -2074,7 +2078,7 @@
         "order": 5,
         "width": 3,
         "height": 3,
-        "gtype": "gauge-battery",
+        "gtype": "gauge-tank",
         "gstyle": "needle",
         "title": "Free Storage",
         "units": "units",
@@ -2084,15 +2088,19 @@
         "segments": [
             {
                 "from": "0",
-                "color": "#ea5353"
+                "color": "#a8f5ff"
             },
             {
-                "from": "40",
-                "color": "#ffc800"
+                "from": "15",
+                "color": "#55dbec"
             },
             {
-                "from": "70",
-                "color": "#5cd65c"
+                "from": "35",
+                "color": "#53b4fd"
+            },
+            {
+                "from": "50",
+                "color": "#2397d1"
             }
         ],
         "min": 0,
